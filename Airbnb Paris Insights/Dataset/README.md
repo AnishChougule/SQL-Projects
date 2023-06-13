@@ -1,1 +1,1 @@
-
+## You can obtain the datasets from the Airbnb site, airbnbinside.com. Within this directory, you will find Jupyter notebooks containing the code for data cleaning, converting CSV to MySQL, and generating word clouds.
