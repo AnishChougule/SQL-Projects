@@ -1,5 +1,5 @@
 
-# Airbnb Paris Insights: SQL Analysis and Word Clouds
+# Airbnb Paris Insights: SQL Analysis and Python WordClouds
 
 In this project, titled "Exploring Airbnb Insights through SQL Analysis and Word Clouds: Paris Edition," I aimed to provide valuable insights into Airbnb listings in Paris through SQL analysis and word clouds. By leveraging SQL and MySQL, along with Python libraries such as Pandas, Matplotlib, NLTK, and WordCloud, I analyzed the dataset, cleaned the data, and generated word clouds for textual columns. The project encompassed the following steps and tools:
 
