@@ -196,16 +196,18 @@ ORDER BY total_reviews DESC;
 
 
 #24
+WITH FilteredReviews AS (
+    SELECT listing_id
+    FROM reviews
+    WHERE LOWER(comments) REGEXP '(great|perfect|trs bien|highly recommend|bien situ|fantastic|incredible)'
+)
 SELECT *
 FROM listings
 WHERE room_type = 'Entire home/apt'
-AND price <= 150
-AND beds >= 2
-AND instant_bookable = 't'
-AND listing_id IN  
-	(SELECT listing_id
-		FROM reviews
-		WHERE LOWER(comments) REGEXP '(great|perfect|trs bien|highly recommend|bien situ|fantastic)')
+    AND price <= 150
+    AND beds >= 2
+    AND instant_bookable = 't'
+    AND listing_id IN (SELECT listing_id FROM FilteredReviews)
 ORDER BY number_of_reviews DESC
 LIMIT 20;
 
